@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burnsys | Premium Security & IT Solutions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="nav-container">
+        <div class="nav-content">
+            <div class="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Burnsys">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#get-started" class="nav-btn">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1 class="reveal">Secure. Automate. <br><span class="orange-text">Innovate.</span></h1>
+            <p>Next-generation Cybersecurity, Enterprise Solution, Smart CCTV, and Odoo ERP solutions tailored for your business growth.</p>
+            <div class="hero-btns">
+                <a href="#get-started" class="btn-primary">Start a Project</a>
+                <a href="#services" class="btn-secondary">View Services</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="partners" class="partners-section">
+        <div class="container">
+            <p class="partner-label">Our Strategic Partners</p>
+            <div class="partners-slider">
+                <div class="partners-track">
+                    <img src="https://www.iottechexpo.com/northamerica/wp-content/uploads/2025/05/fortinet-logo-rgb-black-red-png-1024x281.png" alt="Fortinet">
+                    <img src="https://smartlink.pk/wp-content/uploads/2021/12/Hikvision-logo2.png" alt="Hikvision">
+                    <img src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_50459f97fe685eff5c2d708548718a3d/infraon-infinity.png" alt="Infraon">
+                    <img src="https://awsmp-logos.s3.amazonaws.com/27ac863b-20c3-4b11-ac09-1469dd15dacb/c2ffa1e37ba79f39a8d3f3010d679d83.png" alt="PowerDMARC">
+                    <img src="https://www.iottechexpo.com/northamerica/wp-content/uploads/2025/05/fortinet-logo-rgb-black-red-png-1024x281.png" alt="Fortinet">
+                    <img src="https://smartlink.pk/wp-content/uploads/2021/12/Hikvision-logo2.png" alt="Hikvision">
+                    <img src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_50459f97fe685eff5c2d708548718a3d/infraon-infinity.png" alt="Infraon">
+                    <img src="https://awsmp-logos.s3.amazonaws.com/27ac863b-20c3-4b11-ac09-1469dd15dacb/c2ffa1e37ba79f39a8d3f3010d679d83.png" alt="PowerDMARC">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section container" data-aos="zoom-in-up" id="about">
+        <div class="about-grid" data-aos="zoom-in-up">
+            <div class="about-image-wrapper liquid-effect">
+                <img src="https://theincmagazine.com/wp-content/uploads/2021/02/Dubai-Roadmap-of-Worlds-Happiest-City.jpg" alt="Dubai Tech Integration">
+                <div class="experience-badge">
+                    <span class="exp-number">10+</span>
+                    <span class="exp-text">Years of<br>Excellence</span>
+                </div>
+            </div>
+
+            <div class="about-content glass-main-frame">
+                <h4 class="orange-text">ABOUT US</h4>
+                <h2>Professional Technology Integrator <span class="orange-text">Based in Dubai</span></h2>
+                <p>With over two decades of industry leadership, Burnsys has established itself as a cornerstone of technological innovation in the UAE. We bridge the gap between complex digital infrastructure and seamless business operations.</p>
+                <div class="about-stats-mini">
+                    <div class="stat-item">
+                        <i class="fas fa-map-marker-alt icon-orange"></i>
+                        <span>Headquartered in Dubai, UAE</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-history icon-orange"></i>
+                        <span>10+ Years Expertise</span>
+                    </div>
+                </div>
+                <div class="mission-vision-grid">
+                    <div class="mv-box glass-sub-box">
+                        <i class="fas fa-bullseye icon-orange"></i>
+                        <h3>Our Mission</h3>
+                        <p>To empower businesses through innovative technology and world-class security.</p>
+                    </div>
+                    <div class="mv-box glass-sub-box">
+                        <i class="fas fa-eye icon-orange"></i>
+                        <h3>Our Vision</h3>
+                        <p>To be the region's leading IT partner, recognized for cybersecurity integrity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <section id="services" class="services-section">
+    <div class="container">
+        <div class="section-header-modern">
+            <span class="sub-title">What We Offer</span>
+            <h2 class="main-title">Our Professional Services</h2>
+            <p class="header-desc">
+                We provide comprehensive technology solutions to help international companies 
+                establish secure operations, optimize infrastructure, and achieve sustainable growth in Dubai.
+            </p>
+        </div>
+
+       <div class="services-grid" data-aos="zoom-in-up">
+    <div class="service-card-container">
+        <div class="service-card-inner">
+            <div class="service-card-front service-card liquid-effect">
+                <div class="service-image-box">
+                    <img src="https://eleks.com/wp-content/uploads/Photo-for-article3.png" alt="Cyber Security">
+                </div>
+                <div class="front-text-area">
+                    <h3>Cyber Security</h3>
+                    <p>Protecting your digital assets with advanced threat intelligence and 24/7 monitoring.</p>
+                    <button class="details-btn" onclick="toggleFlip(this)">Details</button>
+                </div>
+            </div>
+            <div class="service-card-back" onclick="toggleFlip(this)">
+                <h3>Service Details</h3>
+                <ul class="back-list">
+                    <li>Vulnerability Assessment</li>
+                    <li>24/7 Threat Monitoring</li>
+                    <li>Incident Response</li>
+                    <li>NAC Solution</li>
+                    <li>DLP Solution</li>
+                </ul>
+                <a href="#contact" class="get-quote-btn" onclick="event.stopPropagation();">Get Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-card-container">
+        <div class="service-card-inner">
+            <div class="service-card-front service-card liquid-effect">
+                <div class="service-image-box">
+                    <img src="https://wadeinuae.com/wp-content/uploads/2025/06/cctv-installation.jpg" alt="CCTV">
+                </div>
+                <div class="front-text-area">
+                    <h3>CCTV Installation</h3>
+                    <p>AI-integrated surveillance systems for smart premises protection.</p>
+                    <button class="details-btn" onclick="toggleFlip(this)">Details</button>
+                </div>
+            </div>
+            <div class="service-card-back" onclick="toggleFlip(this)">
+                <h3>Service Details</h3>
+                <ul class="back-list">
+                    <li>AI Face Recognition</li>
+                    <li>Remote Access Control</li>
+                    <li>CCTV & NVR Setup</li>
+                    </li>AI-powered video analytics setup</li>
+                </ul>
+                <a href="#contact" class="get-quote-btn" onclick="event.stopPropagation();">Get Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-card-container">
+        <div class="service-card-inner">
+            <div class="service-card-front service-card liquid-effect">
+                <div class="service-image-box">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500" alt="Odoo">
+                </div>
+                <div class="front-text-area">
+                    <h3>Odoo Integration</h3>
+                    <p>Full ERP lifecycle management and custom module development.</p>
+                    <button class="details-btn" onclick="toggleFlip(this)">Details</button>
+                </div>
+            </div>
+            <div class="service-card-back" onclick="toggleFlip(this)">
+                <h3>Service Details</h3>
+                <ul class="back-list">
+                    <li>Custom ERP Modules</li>
+                    <li>E-Commerce & Marketplaces</li>
+                    <li>Accounting & Finance</li>
+                    <li>CRM & Marketing</li>
+                    <li>HR Management</li>
+                </ul>
+                <a href="#contact" class="get-quote-btn" onclick="event.stopPropagation();">Get Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-card-container">
+        <div class="service-card-inner">
+            <div class="service-card-front service-card liquid-effect">
+                <div class="service-image-box">
+                    <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?auto=format&fit=crop&w=500" alt="POS">
+                </div>
+                <div class="front-text-area">
+                    <h3>POS Systems</h3>
+                    <p>Seamless retail operations with integrated inventory and sales data.</p>
+                    <button class="details-btn" onclick="toggleFlip(this)">Details</button>
+                </div>
+            </div>
+            <div class="service-card-back" onclick="toggleFlip(this)">
+                <h3>Service Details</h3>
+                <ul class="back-list">
+                    <li>Inventory Management</li>
+                    <li>Multi-branch Support</li>
+                    <li>Sales Analytics</li>
+                    <li>POS All in One</li>
+                </ul>
+                <a href="#contact" class="get-quote-btn" onclick="event.stopPropagation();">Get Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-card-container">
+        <div class="service-card-inner">
+            <div class="service-card-front service-card liquid-effect">
+                <div class="service-image-box">
+                    <img src="https://www.orientsoftware.com/Themes/Content/Images/blog/2024-08-05/enterprise-networking-types.webp" alt="Networking">
+                </div>
+                <div class="front-text-area">
+                    <h3>Enterprise Networking</h3>
+                    <p>Robust and secure network infrastructure for high-speed data flow.</p>
+                    <button class="details-btn" onclick="toggleFlip(this)">Details</button>
+                </div>
+            </div>
+            <div class="service-card-back" onclick="toggleFlip(this)">
+                <h3>Service Details</h3>
+                <ul class="back-list">
+                    <li>Core Network Implementation</li>
+                    <li>Firewall Security</li>
+                    <li>Wireless Solutions</li>
+                    <li>Enterprise Solutions</li>
+                </ul>
+                <a href="#contact" class="get-quote-btn" onclick="event.stopPropagation();">Get Quote</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-card-container">
+        <div class="service-card-inner">
+            <div class="service-card-front service-card liquid-effect">
+                <div class="service-image-box">
+                    <img src="https://eduiq.com/images/article-activity.jpg" alt="Monitoring">
+                </div>
+                <div class="front-text-area">
+                    <h3>System Monitoring</h3>
+                    <p>Proactive maintenance and remote support to keep your systems running.</p>
+                    <button class="details-btn" onclick="toggleFlip(this)">Details</button>
+                </div>
+            </div>
+            <div class="service-card-back" onclick="toggleFlip(this)">
+                <h3>Service Details</h3>
+                <ul class="back-list">
+                    <li>24/7 System Monitoring</li>
+                    <li>Cloud Monitoring</li>
+                    <li>Infrastructure Monitoring</li>
+                    <li>Security Monitoring</li>
+                </ul>
+                <a href="#contact" class="get-quote-btn" onclick="event.stopPropagation();">Get Quote</a>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+    <section id="team" class="team-section" data-aos="zoom-in-up">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title-alt">Our Leadership Team</h2>
+                <div class="h-underline"></div>
+            </div>
+            <div class="team-grid">
+                <div class="team-glass-card liquid-effect">
+                    <div class="team-img-wrapper">
+                        <img src="{{ url_for('static', filename='fathi.png') }}" alt="Fathi Sakhri">
+                    </div>
+                    <h4 class="member-name">Fathi Sakhri</h4>
+                    <p class="member-role">Co-Founder & CEO</p>
+                </div>
+                <div class="team-glass-card liquid-effect">
+                    <div class="team-img-wrapper">
+                        <img src="{{ url_for('static', filename='chit.png') }}" alt="Chit Paing">
+                    </div>
+                    <h4 class="member-name">Chit Paing</h4>
+                    <p class="member-role">Senior Network Expert</p>
+                    <p class="member-role">CCIE#68826</p>
+                </div>
+                <div class="team-glass-card liquid-effect">
+                    <div class="team-img-wrapper">
+                        <img src="{{ url_for('static', filename='Sarah.png') }}" alt="Sarah Osama">
+                    </div>
+                    <h4 class="member-name">Sarah Osama</h4>
+                    <p class="member-role">Lead Developer</p>
+                </div>
+                <div class="team-glass-card liquid-effect">
+                    <div class="team-img-wrapper">
+                        <img src="{{ url_for('static', filename='Rajan.png') }}" alt="Mahmud Rajan">
+                    </div>
+                    <h4 class="member-name">Mahmud Rajan</h4>
+                    <p class="member-role">Cyber Security Expert</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="get-started" class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper glass-solid-form">
+                <h2>Ready to Integrate?</h2>
+                <p>Connect with our consultants today.</p>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <input type="text" name="phone" placeholder="Phone Number">
+                    <select name="service">
+                        <option value="Cyber Security">Cyber Security</option>
+                        <option value="CCTV">CCTV Installation</option>
+                        <option value="Odoo">Odoo Integration</option>
+                        <option value="Enterprise">Enterprise Solutions</option>
+                        <option value="POS">POS Systems</option>
+                        <option value="Monitoring">System Monitoring</option>
+                    </select>
+                    <textarea name="description" placeholder="How can we help you?" rows="5"></textarea>
+                    <button type="submit" class="submit-btn-animate">Submit Proposal</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+   <footer id="contact" class="footer-main">
+    <div class="container footer-grid">
+        <div class="footer-col about">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Burnsys" class="footer-logo">
+            <p class="footer-desc">Premium corporate IT and Security services provider in Dubai, specialized in enterprise automation and cybersecurity.</p>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/burnsys/posts/?feedView=all" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/burnsys_ae/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/971523557541" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">The Company</a></li>
+                <li><a href="#services">Solutions</a></li>
+                <li><a href="#team">Our Team</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4 class="footer-title">Services</h4>
+            <ul class="footer-links">
+                <li><a href="#">Cybersecurity</a></li>
+                <li><a href="#">CCTV Installation</a></li>
+                <li><a href="#">Enterprise Solution</a></li>
+                <li><a href="#">System Monitoring</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4 class="footer-title">Get In Touch</h4>
+            <ul class="footer-contact">
+                <li><i class="fas fa-map-marker-alt"></i><span>XL Tower Room 502, Marasi Drive, Business Bay, Dubai</span></li>
+                <li><i class="fas fa-phone-alt"></i><span>+971 52 355 7541</span></li>
+                <li><i class="fas fa-envelope"></i><span>Hello@burnsys.io</span></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 BURNSYS.IO | ALL RIGHTS RESERVED</p>
+    </div>
+</footer>
+
+    <div id="successModal" class="modal-overlay">
+        <div class="modal-content">
+    <div class="modal-icon-wrapper">
+        <i class="fas fa-check-circle"></i>
+    </div>
+    <h2>Proposal Received</h2>
+    <p>Thank you for choosing Burnsys. Our technical consultants in Dubai will review your request and reach out to you within 24 business hours.</p>
+    <button type="button" onclick="closeModal()" class="modal-btn">Continue</button>
+</div>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            
+            const submitBtn = this.querySelector('.submit-btn-animate');
+            const originalText = submitBtn.innerText;
+            
+            // ၁။ ခလုတ်ကို Loading အခြေအနေပြောင်းမယ်
+            submitBtn.innerText = 'Processing...';
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+
+            const formData = new FormData(this);
+
+            fetch('/get-started', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // ၂။ အောင်မြင်ရင် Modal ပြမယ်
+                if (data.status === 'success') {
+                    document.getElementById('successModal').style.display = 'flex';
+                    this.reset(); 
+                } else {
+                    alert("Error: " + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert("Something went wrong. Please try again.");
+            })
+            .finally(() => {
+                // ၃။ အကုန်ပြီးသွားရင် ခလုတ်ကို မူလအတိုင်း ပြန်ပြင်မယ်
+                submitBtn.innerText = originalText;
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+            });
+        });
+    }
+});
+
+function closeModal() {
+    document.getElementById('successModal').style.display = 'none';
+}
+</script>
+
+
+    <script>
+    const observerOptions = {
+        threshold: 0.1 // ၁၀ ရာခိုင်နှုန်း မြင်ရတာနဲ့ animation စမယ်
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('aos-animate');
+            } else {
+                // Scroll ပြန်တက်ရင် ပျောက်သွားစေချင်ရင် အောက်က line ကို သုံးပါ
+                entry.target.classList.remove('aos-animate');
+            }
+        });
+    }, observerOptions);
+
+    // data-aos သုံးထားတဲ့ element အားလုံးကို လိုက်ဖမ်းမယ်
+    document.querySelectorAll('[data-aos]').forEach(el => observer.observe(el));
+</script>
+
+<script>
+    function toggleFlip(element) {
+        // Button ကနေ ဖြစ်ဖြစ်၊ Card အနောက်ခြမ်းကနေ ဖြစ်ဖြစ် Container ကို ရှာပါတယ်
+        const container = element.closest('.service-card-container');
+        if (container) {
+            container.classList.toggle('is-flipped');
+        }
+    }
+</script>
+</body>
+</html>

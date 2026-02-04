@@ -1,0 +1,657 @@
+:root {
+    --orange: #FF9500;
+    --dark: #1d1d1f;
+    --light-bg: #f5f5f7;
+    --white: #ffffff;
+    --border: rgba(0, 0, 0, 0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body, .services-section, .team-section, .about-section {
+    background-color: #f8f9fa !important; /* အရင်က var(--white) အစား ဒီအရောင်ကို သုံးလိုက်တာပါ */
+    color: var(--dark); 
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* --- NAVIGATION --- */
+.nav-container {
+    position: fixed; top: 0; width: 100%; z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
+}
+.nav-content {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 12px 0; max-width: 1200px; margin: 0 auto; width: 90%;
+}
+.logo img { height: 40px; }
+.nav-menu { display: flex; list-style: none; gap: 30px; align-items: center; }
+.nav-menu a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 14px; transition: 0.3s; }
+.nav-menu a:hover { color: var(--orange); }
+.nav-btn { background: var(--orange); color: white !important; padding: 10px 25px; border-radius: 50px; font-weight: 700; }
+
+/* Hero Section */
+.hero-section { padding: 180px 0 100px; text-align: center; background: radial-gradient(circle at 50% 50%, #fff7ed 0%, #fff 70%); }
+.hero-section h1 { font-size: 70px; font-weight: 800; letter-spacing: -2px; line-height: 1.1; margin-bottom: 20px;}
+.orange-text { color: var(--orange); }
+.hero-section p { font-size: 20px; color: #6e6e73; margin-bottom: 40px; max-width: 800px; margin-inline: auto; }
+
+/* Buttons with Sanite Bounce */
+.btn-primary { background: var(--dark); color: white; padding: 18px 40px; border-radius: 12px; text-decoration: none; font-weight: 600; display: inline-block; margin: 10px; transition: all 0.4s cubic-bezier(0.3, 1.75, 0.4, 1); }
+.btn-primary:hover {
+    background: var(--orange);
+    transform: translateY(-8px) scale(1.05);
+}
+
+.btn-secondary { border: 1px solid var(--border); color: var(--dark); padding: 18px 40px; border-radius: 12px; text-decoration: none; display: inline-block; transition: 0.3s; }
+
+/* Partners Section */
+.partners-section { padding: 60px 0; background: #fff; border-top: 1px solid rgba(0,0,0,0.05); overflow: hidden; }
+.partners-slider { width: 100%; overflow: hidden; white-space: nowrap; display: flex; }
+.partners-track { display: flex; width: max-content; animation: scroll-track 30s linear infinite; align-items: center; }
+.partners-track img {
+    height: 35px; width: auto; max-width: 140px; object-fit: contain; margin: 0 50px;
+    filter: none !important; opacity: 1;
+    transition: all 0.4s cubic-bezier(0.3, 1.75, 0.4, 1);
+}
+.partners-track img:hover { transform: scale(1.2) rotate(2deg); }
+
+@keyframes scroll-track { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+/* --- LIQUID EFFECT (The Sanite Bounce Fix) --- */
+.liquid-effect {
+    background: rgba(255, 255, 255, 0.8) !important; /* 0.45 ကို 0.8 တင်လိုက်လို့ ပိုဖြူလာမယ် */
+    border: 1px solid rgba(255, 255, 255, 1) !important; /* Border ကို ပိုထင်းအောင် အပိတ်ပြောင်းလိုက်တယ် */
+    backdrop-filter: blur(15px);
+    border-radius: 30px;
+    transition: transform 0.5s cubic-bezier(0.3, 1.75, 0.4, 1), background 0.2s, box-shadow 0.2s !important;
+    cursor: pointer;
+    will-change: transform;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05); /* Shadow ကို အနည်းငယ် ပိုတင်လိုက်တယ် */
+}
+
+.liquid-effect:hover {
+    transform: translateY(-12px) scale(1.02);
+    background: rgba(255, 255, 255, 0.8);
+    border-color: var(--orange);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Click လုပ်လိုက်ရင် Sanite လို "အိခနဲ" ချက်ချင်း ဖြစ်သွားစေမည့်အပိုင်း */
+.liquid-effect:active {
+    transform: scale(0.94) translateY(0);
+    transition: transform 0.1s cubic-bezier(0.2, 0, 0.2, 1) !important;
+}
+
+/* Sections */
+.about-section { padding: 100px 0; text-align: center; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.about-box { padding: 50px; border-radius: 35px; }
+
+/* --- SERVICES SECTION (Spacing Fixed) --- */
+.services-section { padding: 100px 0; background: var(--light-bg); }
+.section-header { 
+    text-align: center; 
+    margin-bottom: 90px; /* Spacing ပိုချဲ့လိုက်ပါတယ် */
+}
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+.service-card { padding: 40px; border-radius: 25px; background: white; text-align: center; }
+.service-card i, .icon-orange { font-size: 35px; color: var(--orange); margin-bottom: 20px; }
+
+/* Team Section */
+.team-section { padding: 120px 0; background-color: #fbfbfd; text-align: center; }
+.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 60px; }
+.team-glass-card { padding: 40px 20px; border-radius: 40px; }
+/* Team ပုံရဲ့ အဝိုင်းဘောင်လေးကို Orange ပြောင်းခြင်း */
+.team-img-wrapper { 
+    width: 140px; 
+    height: 140px; 
+    margin: 0 auto 25px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    
+    /* ဒီနေရာမှာ အဖြူအစား Orange Glow လေး ထည့်လိုက်တာပါ */
+    border: 4px solid var(--orange); 
+    box-shadow: 0 0 20px rgba(255, 149, 0, 0.2); 
+    
+    background: white; /* ပုံမပေါ်ခင်မှာ အနောက်ကခံမယ့်အရောင် */
+}
+
+/* ပုံကို ပိုပြီးသေသပ်သွားအောင် ဖြည့်စွက်ချက် */
+.team-img-wrapper img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    transition: transform 0.3s ease;
+}
+
+/* Hover လုပ်ရင် ပုံလေးက နည်းနည်း ကြီးလာမယ် */
+.team-glass-card:hover .team-img-wrapper img {
+    transform: scale(1.1);
+}
+
+/* Contact Form */
+.contact-section { padding: 100px 0; }
+.contact-wrapper { max-width: 850px; margin: 0 auto; padding: 60px; text-align: center; border-radius: 40px; background: #fff; border: 1px solid var(--border); box-shadow: 0 30px 60px rgba(0,0,0,0.05); }
+.contact-form input, .contact-form select, .contact-form textarea {
+    width: 100%; padding: 18px; margin-bottom: 20px; border: 1px solid rgba(0,0,0,0.1); border-radius: 12px;
+    background: rgba(245, 245, 247, 0.6); backdrop-filter: blur(10px); transition: 0.3s;
+}
+.contact-form textarea { min-height: 150px; }
+.contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--orange); background: #fff; }
+.submit-btn-animate { width: 100%; background: var(--orange); color: white; padding: 20px; border: none; border-radius: 12px; font-weight: 700; cursor: pointer; transition: 0.3s; }
+
+/* Footer */
+.footer-main {
+    background: #fcfcfc; /* အရင်ထက် နည်းနည်းပိုလင်းတဲ့ grey-black အရောင်ပါ */
+    color: #385a8a;
+    padding: 80px 0 40px;
+}
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.5fr; gap: 40px; }
+.footer-logo { height: 50px; filter: none !important; margin-bottom: 25px; }
+.footer-title { color: var(--orange); font-size: 16px; font-weight: 700; text-transform: uppercase; margin-bottom: 30px; letter-spacing: 1px; }
+.footer-links, .footer-contact { list-style: none; }
+.footer-links li, .footer-contact li { margin-bottom: 15px; font-size: 14px; display: flex; gap: 12px; align-items: flex-start; }
+.footer-links a { color: #94a3b8; text-decoration: none; transition: 0.3s; }
+.footer-links a:hover { color: #FF9500; }
+.footer-contact i { color: var(--orange); min-width: 20px; margin-top: 4px; }
+.footer-contact span { line-height: 1.6; text-align: left; }
+
+/* မင်းရဲ့ code အဟောင်းထဲက .social-links a နဲ့ .social-links a:hover နေရာမှာ ဒါလေးပဲ အစားထိုးပါ */
+
+.social-links { 
+    display: flex; 
+    gap: 15px; 
+    margin-top: 20px; 
+}
+
+.social-links a { 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    /* ဒီနေရာမှာ background ကို မီးခိုးနုရောင် ပြောင်းလိုက်မှ အဖြူပေါ်မှာ ပေါ်မှာပါ */
+    background: #f0f0f0 !important; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    /* Icon အရောင်ကို မင်းရဲ့ Orange ပေးလိုက်ပါ */
+    color: #FF9500 !important; 
+    transition: 0.3s; 
+    text-decoration: none;
+}
+
+.social-links a:hover { 
+    background: #FF9500 !important; 
+    color: white !important; 
+}
+
+/* Icon ပုံစံကို သတ်မှတ်ခြင်း */
+.social-links a i {
+    font-size: 18px;
+    color: inherit !important; /* အပေါ်က color အတိုင်း လိုက်ပြောင်းအောင်ပါ */
+}
+
+
+.footer-bottom { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+
+@media (max-width: 768px) {
+    .grid-2, .services-grid, .team-grid, .footer-grid { grid-template-columns: 1fr; }
+    .hero-section h1 { font-size: 45px; }
+}
+
+/* --- UPDATED ABOUT SECTION --- */
+.about-grid {display: grid;grid-template-columns: 1fr 1.2fr;gap: 60px;align-items: center;padding: 80px 0;}
+
+.about-image-wrapper {position: relative;border-radius: 40px;overflow: hidden;height: 500px;}
+
+.about-image-wrapper img { width: 100%;height: 100%;object-fit: cover;}
+
+.experience-badge {position: absolute;bottom: 30px;right: 30px;background: var(--orange);color: white;padding: 20px 30px;border-radius: 25px;display: flex;align-items: center;gap: 15px;
+    box-shadow: 0 15px 30px rgba(255, 149, 0, 0.3);
+}
+
+.exp-number { font-size: 35px; font-weight: 800; }
+.exp-text { font-size: 13px; font-weight: 600; line-height: 1.2; text-transform: uppercase; }
+
+.about-content h2 { font-size: 42px; margin: 20px 0; line-height: 1.2; }
+.about-content p { color: #6e6e73; line-height: 1.7; margin-bottom: 30px; }
+
+.about-stats-mini {display: flex;gap: 30px;margin-bottom: 40px;padding-bottom: 20px;border-bottom: 1px solid var(--border);}
+
+.stat-item { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 14px; }
+
+.mission-vision-grid {display: grid;grid-template-columns: 1fr 1fr;gap: 20px;}
+
+.mv-box {padding: 25px;background: rgba(255, 255, 255, 0.5) !important;border: 1px solid rgba(255, 255, 255, 0.8) !important;border-radius: 20px;
+    /* Sanite Bounce Logic ပေါင်းထည့်ခြင်း */
+    transition: transform 0.5s cubic-bezier(0.3, 1.75, 0.4, 1), background 0.3s !important;
+    cursor: pointer;
+}
+
+.mv-box:hover { background: white !important; box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05) !important; transform: translateY(-8px) scale(1.03) !important; border-color: var(--orange) !important;}
+
+.mv-box:active {
+    transform: scale(0.95) !important;
+}
+.mv-box h3 { font-size: 18px; margin: 15px 0 10px; }
+.mv-box p { font-size: 13px; margin-bottom: 0; }
+
+@media (max-width: 992px) {
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-image-wrapper { height: 350px; }
+}
+
+/* --- ENHANCED SOLID GLASS LOOK (ADD TO BOTTOM) --- */
+
+.glass-main-frame {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 1) !important;
+    padding: 45px;
+    border-radius: 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04) !important;
+    /* Frame ကြီးတစ်ခုလုံးပါ Bounce ဖြစ်ချင်ရင် အောက်က line ထည့်ပါ */
+    transition: transform 0.5s cubic-bezier(0.3, 1.75, 0.4, 1) !important;
+}
+
+.glass-main-frame:hover {
+    transform: translateY(-5px);
+}
+
+/* အတွင်းထဲက Mission/Vision Box ကို ပိုထင်းစေရန် */
+.glass-sub-box {
+    background: rgba(255, 255, 255, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Service Card နဲ့ Team Card တွေကို Glass Look ပိုထင်ရှားစေရန် */
+.service-card, .team-glass-card , .mission-vision-grid , .glass-sub-box {
+    background: rgba(255, 255, 255, 0.6) !important;
+    border: 1px solid rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(15px) !important;
+}
+
+/* Hover ဖြစ်ချိန်မှာ Bounce Effect နဲ့အတူ Glass အရောင် ပိုတောက်ပလာစေရန် */
+.liquid-effect:hover {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-color: var(--orange) !important;
+    box-shadow: 0 25px 50px rgba(255, 149, 0, 0.15) !important;
+}
+
+/* Success Modal Premium Style */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.85); /* Slate Dark Blur */
+    backdrop-filter: blur(12px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 60px 50px;
+    border-radius: 35px;
+    text-align: center;
+    max-width: 500px; /* ပိုကြီးအောင်ချဲ့လိုက်ပါသည် */
+    width: 90%;
+    border: 1px solid rgba(255, 149, 0, 0.3);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+    animation: modalPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modalPop {
+    from { opacity: 0; transform: scale(0.8) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.modal-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: #fff7ed;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+}
+
+.modal-icon-wrapper i {
+    font-size: 40px;
+    color: var(--orange);
+}
+
+.modal-content h2 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1d1d1f;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.modal-content p {
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.modal-btn {
+    background: #1d1d1f; /* ပိုရင့်ကျက်သောအရောင်ကို သုံးထားပါသည် */
+    color: white;
+    border: none;
+    padding: 18px 50px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.3, 1.75, 0.4, 1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.modal-btn:hover {
+    background: var(--orange);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(255, 149, 0, 0.4);
+}
+
+
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* Footer Grid Fix */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr; /* Column ၄ ခုကို နေရာအချိုးကျ ခွဲဝေခြင်း */
+    gap: 40px;
+    align-items: start;
+}
+
+/* Social Icons Container */
+.social-links {
+    display: flex !important; /* ပေါ်လာအောင် အတင်းခိုင်းတာပါ */
+    gap: 15px;
+    margin-top: 25px;
+    justify-content: flex-start;
+}
+
+/* Individual Icon Style */
+.social-icon {width: 45px;height: 45px;border-radius: 50%;background: rgba(255, 255, 255, 0.1); /* Icon ရဲ့ အဝိုင်းဘောင်လေးကို မှိန်မှိန်လေး မြင်ရစေဖို့ */display: flex;align-items: center;justify-content: center;
+text-decoration: none;transition: all 0.3s cubic-bezier(0.3, 1.75, 0.4, 1);border: 1px solid rgba(255, 255, 255, 0.2);}
+/* Icon ထဲက FontAwesome အရောင်ကို အဖြူပြောင်းခြင်း */
+.social-icon i {color: #ffffff !important; /* ဒါက အဓိကပါ၊ အမြဲဖြူနေအောင် လုပ်လိုက်တာ */font-size: 18px;}
+/* Hover လုပ်လိုက်ရင် Orange ဖြစ်သွားစေဖို့ */
+.social-icon:hover {background: var(--orange) !important;transform: translateY(-5px);border-color: var(--orange);box-shadow: 0 8px 20px rgba(255, 149, 0, 0.4);}
+
+/* Hover ဖြစ်ချိန်မှာလည်း Icon ကို အဖြူအတိုင်း ထားချင်ရင် */
+.social-icon:hover i {
+    color: #ffffff !important;
+}
+
+/* Footer Title Fix */
+.footer-title {margin-bottom: 25px;display: block;}
+/* AOS zoom-in-up effect ကို CSS နဲ့ ဖန်တီးခြင်း */
+
+
+[data-aos="zoom-in-up"] {
+
+opacity: 0;
+
+transform: translateY(100px) scale(0.6); /* အောက်ရောက်နေမယ်၊ သေးနေမယ် */
+
+transition-property: transform, opacity;
+
+transition-duration: 1000ms; /* ၁ စက္ကန့်ကြာမယ် */
+
+transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Sanite Bounce စတိုင် */
+
+}
+
+
+
+/* Scroll ဆွဲလို့ active ဖြစ်သွားရင် မူလအတိုင်း ပြန်ဖြစ်မယ် */
+
+[data-aos="zoom-in-up"].aos-animate {
+
+opacity: 1;
+
+transform: translateY(0) scale(1);
+
+}
+
+/* Header ကို အလယ်ပို့ပြီး သေသပ်အောင်လုပ်ခြင်း */
+.section-header-modern {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px; /* ဘေးတိုက်ကို auto ထားမှ အလယ်ရောက်မှာပါ */
+    padding: 0 20px;
+}
+
+.section-header-modern .sub-title {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--orange);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.section-header-modern .main-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.section-header-modern .header-desc {
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* Services Grid ကို ပြဲမသွားအောင် ထိန်းညှိခြင်း */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* တစ်တန်းကို ၃ ခုပဲထားမယ် */
+    gap: 30px;
+    max-width: 1100px; /* Grid ကြီး တစ်ခုလုံး အရမ်းပြဲမသွားအောင် ထိန်းတာပါ */
+    margin: 0 auto;    /* Grid ကို Container ရဲ့ အလယ်မှာ ထားမယ် */
+}
+
+/* Card တစ်ခုချင်းစီရဲ့ Design */
+.service-card {
+    padding: 40px 30px;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile မှာဆိုရင် တစ်ခုချင်းစီ ပြန်စီမယ် */
+@media (max-width: 992px) {
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .section-header-modern .main-title { font-size: 32px; }
+}
+
+
+
+
+
+/* --- Card Container & Height Fix --- */
+.service-card-container {
+    perspective: 2000px;
+    height: 520px !important; /* စာသားတွေ အချိုးကျဖို့ အမြင့်ကို နည်းနည်း ထပ်တင်ထားပါတယ် */
+    width: 100%;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.service-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.service-card-container.is-flipped .service-card-inner {
+    transform: rotateY(180deg);
+}
+
+.service-card-front, .service-card-back {
+    position: absolute !important;
+    top: 0; left: 0; width: 100%; height: 100%;
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06); /* အရိပ်ကို အေးအေးလေးပဲ ထားပါတယ် */
+    background: #ffffff !important;
+}
+
+/* ၁။ Front Card ရဲ့ အပြင်အဆင်ကို ပုံအတွက် အဆင်သင့်ဖြစ်အောင် ပြင်မယ် */
+.service-card-front {
+    padding: 0 !important; /* ပုံကို ဘောင်ကပ်ဖို့ padding ဖြုတ်ရပါမယ် */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start !important;
+    background: #fff !important;
+    overflow: hidden; /* ပုံဘောင်ကျော်မထွက်အောင် */
+}
+
+/* ၂။ Icon တွေကို ဖျက်ထုတ်ပစ်မယ် (ဒါမှ ပုံကို မဖုံးမှာပါ) */
+.service-card-front i {
+    display: none !important;
+}
+
+/* ၃။ ပုံအတွက် Container Styling */
+.service-image-box {
+    width: 100%;
+    height: 230px; /* ပုံရဲ့ အမြင့် */
+    overflow: hidden;
+}
+
+.service-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ပုံမပြဲအောင် ထိန်းပေးတဲ့ command */
+    display: block !important;
+}
+
+/* ၄။ စာသားတွေအတွက် area */
+.front-text-area {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.front-text-area h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+}
+
+.front-text-area p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Details Button Style */
+.details-btn {
+    background: transparent;
+    border: 1.5px solid var(--orange);
+    color: var(--orange);
+    padding: 10px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    margin-top: auto; /* အမြဲတမ်း အောက်ခြေမှာ တန်းနေအောင် */
+    align-self: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.details-btn:hover {
+    background: var(--orange);
+    color: white;
+}
+
+/* --- Back Side (Clean List & Solid Button) --- */
+.service-card-back {
+    z-index: 1;
+    transform: rotateY(180deg);
+    border: 1.5px solid var(--orange) !important;
+    padding: 35px 25px !important;
+}
+
+.service-card-back h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.back-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.back-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0; /* စာသားတွေကို လိုင်းတားပြီး ခွဲထားပါတယ် */
+    font-size: 0.95rem;
+    color: #444;
+    display: flex;
+    align-items: center;
+}
+
+/* Get Quote Button - ထဲကလို Dark Solid Button */
+.get-quote-btn {
+    background: #2d2d2d;
+    color: white !important;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 700;
+    margin-top: auto;
+    transition: 0.3s;
+}
+
+.get-quote-btn:hover {
+    background: var(--orange);
+}
