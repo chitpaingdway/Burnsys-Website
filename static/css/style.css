@@ -87,9 +87,10 @@ body, .services-section, .team-section, .about-section {
 }
 
 /* Sections */
-.about-section { padding: 100px 0; text-align: center; }
+.about-section { padding: 100px 0; text-align: center;overflow-x: visible; }
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
-.about-box { padding: 50px; border-radius: 35px; }
+.about-box { padding: 50px; border-radius: 35px;}
+
 
 /* --- SERVICES SECTION (Spacing Fixed) --- */
 .services-section { padding: 100px 0; background: var(--light-bg); }
