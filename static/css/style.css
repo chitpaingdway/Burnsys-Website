@@ -461,13 +461,17 @@ transform: translateY(0) scale(1);
     font-size: 42px;
     font-weight: 800;
     color: var(--dark);
-    margin-bottom: 20px;
+    /* margin ကို 20px ကနေ 8px ဒါမှမဟုတ် 10px အထိ လျှော့လိုက်ပါ */
+    margin-bottom: 8px; 
 }
 
 .section-header-modern .header-desc {
     color: #64748b;
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: 16px; /* ၁၇ ထက် ၁၆ က စာဖတ်ရတာ ပိုရှင်းပါတယ် */
+    line-height: 1.5; /* စာကြောင်းကြား space ကို ပိုကျဉ်းစေပါတယ် */
+    max-width: 900px; /* စာသားတွေကို ဘေးဘက် ပိုဆန့်ထုတ်လိုက်ပါ */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Services Grid ကို ပြဲမသွားအောင် ထိန်းညှိခြင်း */
